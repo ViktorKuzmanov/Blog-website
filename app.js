@@ -29,7 +29,14 @@ app.get("/compose", function (req, res) {
   res.render("compose.ejs");
 })
 
-// app.post("/")
+app.post("/compose", function (req, res) {
+  const post = {
+    postTitle: req.body.postTitle,
+    postBody: req.body.postBody
+  }
+  console.log(post);
+  res.send("ok");
+})
 
 app.listen(3000, function (req, res) {
   console.log("Server started running on port 3000...");
