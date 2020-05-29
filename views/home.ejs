@@ -4,6 +4,12 @@
 <p> <%= homeSampleContent %> </p>
 
 
-<% console.log(postsInHome) %>
+<!-- Load posts  -->
+<% postsInHome.forEach(function(element) { %>
+
+    <h1> <%= element.postTitle %> </h1>
+    <p> <%= element.postBody %> </p>
+
+<% }); %>
 
 <%- include('partials/footer'); -%>
