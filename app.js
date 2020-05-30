@@ -40,6 +40,14 @@ app.post("/compose", function (req, res) {
   res.redirect("/");
 })
 
+app.get("/posts/:postName", function (req, res) {
+  posts.forEach((post, i) => {
+    if(post.postTitle === req.params.postName) {
+      console.log("Match found");
+    }
+  });
+})
+
 app.listen(3000, function (req, res) {
   console.log("Server started running on port 3000...");
 })
