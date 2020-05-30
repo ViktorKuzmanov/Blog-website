@@ -46,9 +46,11 @@ app.get("/posts/:postName", function (req, res) {
   posts.forEach((post, i) => {
     const storedPostTitle = _.lowerCase(post.postTitle);
     if(storedPostTitle === requestedTitle) {
+      res.render("post.ejs", {postToShow:post});
       console.log("Match found");
     }
   });
+  res.send("error 404, post not found");
 })
 
 app.listen(3000, function (req, res) {
