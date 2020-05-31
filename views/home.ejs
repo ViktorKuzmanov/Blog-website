@@ -8,8 +8,14 @@
 <% postsInHome.forEach(function(element) { %>
 
     <h1> <%= element.postTitle %> </h1>
-    <p> <%= element.postBody %> </p>
+      <!-- Trundate content to 100 characters -->
+      <div class="">
+        <p> <%= element.postBody.substring(0, 100) + "..." %> <a href='/posts/<%= element.postTitle %>'>Read more</a> </p>
+
+      </div>
 
 <% }); %>
+
+
 
 <%- include('partials/footer'); -%>
