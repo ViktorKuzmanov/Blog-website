@@ -11,4 +11,3 @@ a challenge which is part of a the course I'm learning web development from.
 Create new post at /compose
 
 Check your post at /posts/postName
-
