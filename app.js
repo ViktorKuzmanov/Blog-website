@@ -31,7 +31,6 @@ const posts = []
 app.get("/", function (req, res) {
   // Render list.ejs template with this variable(marker)
   BlogPostModel.find({}, function (err, allBlogPosts) {
-    console.log(allBlogPosts);
     res.render("home", {homeSampleContent: homeStartingContent, postsInHome:allBlogPosts});
   })
 
@@ -59,9 +58,13 @@ app.post("/compose", function (req, res) {
     title: req.body.postTitle,
     text: req.body.postBody
   })
-  blogPost.save();
+  blogPost.save(function(err) {
+    if(err) { console.log("Error saving the document") }
+    else {
+      res.redirect("/");
+    }
+  });
   posts.push(post);
-  res.redirect("/");
 })
 
 app.get("/posts/:postName", function (req, res) {
