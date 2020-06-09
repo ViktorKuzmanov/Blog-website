@@ -1,13 +1,30 @@
-# Blog-website
+# Blog web app
 
-This is a simple blog website I make 100% by myself implementing everything
+Simple blog web app I created as a challenge from the course I'm learning web development from.
 
-I learned about node.js, express.js and EJS templates and layouts as
+## Installation
 
-a challenge which is part of a the course I'm learning web development from.
+Install all dependencies I use in the project
 
-------------------------------------------------------------------------------------
+```bash
+npm install
+```
+Start the server on port 3000
 
-Create new post at /compose
+```bash
+node app.js
+```
+## Usage
 
-Check your post at /posts/postName
+Create new blog post at http://localhost:3000/compose
+
+Check out your post at http://localhost:3000/posts/<postName>
+
+# What I've learned developing this app
+
+Markup : - How to create footer and header using EJS layouts;
+Markup : - How to use EJS template to create the Homepage of all blog posts;
+Markup : - Saving data to MongoDB using Mongoose;
+Markup : - Create page for every blog post dynamically using Express Route parameters;
+Markup : - Fetch blog posts data from MongoDB using Mongoose;
+Markup : - How to plagiarize code (Just kidding :D);
