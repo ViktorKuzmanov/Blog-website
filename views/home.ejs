@@ -1,6 +1,6 @@
 <%- include('partials/header'); -%>
 
-<h1>Home</h1>
+<h1>Blog post title</h1>
 <p> <%= homeSampleContent %> </p>
 
 
@@ -10,7 +10,7 @@
     <h1> <%= element.title %> </h1>
       <!-- Trundate content to 100 characters -->
       <div class="">
-        <p> <%= element.text.substring(0, 100) + "..." %> <a href='/posts/<%= element.postTitle %>'>Read more</a> </p>
+        <p> <%= element.text.substring(0, 100) + "..." %> <a href='/posts/<%= element.title %>'>Read more</a> </p>
 
       </div>
 
