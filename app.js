@@ -10,6 +10,8 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
 mongoose.connect('mongodb://localhost' + databaseName);
 
+
+//
 const blogSchema = new mongoose.Schema({
   title: String,
   text: String
@@ -24,9 +26,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
-
-const posts = []
 
 app.get("/", function (req, res) {
   // Render list.ejs template with this variable(marker)
@@ -64,7 +63,6 @@ app.post("/compose", function (req, res) {
       res.redirect("/");
     }
   });
-  posts.push(post);
 })
 
 app.get("/posts/:postName", function (req, res) {
@@ -77,10 +75,6 @@ app.get("/posts/:postName", function (req, res) {
     }
   })
 })
-
-// app.get("/posts/:postName", function (req, res) {
-//   res.send("ok");
-// })
 
 app.listen(3000, function (req, res) {
   console.log("Server started running on port 3000...");
