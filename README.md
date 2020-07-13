@@ -28,3 +28,6 @@ Check out your post at http://localhost:3000/posts/<postName>
 - Create page for every blog post dynamically using Express Route parameters;
 - Fetch blog posts data from MongoDB using Mongoose;
 - How to plagiarize code (Just kidding :D);
+
+This web application is in phase-out (The software may still be used but no further changes are
+made to it).
